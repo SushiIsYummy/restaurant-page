@@ -1,0 +1,44 @@
+/* @import "~normalize.css/normalize.css"; */
+
+.header {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(128, 128, 128, 0.4);
+  padding: 20px 40px;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+p.restaurant-name {
+  display: flex;
+  align-items: center;
+
+  font-size: 2em;
+  color: yellow;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 20px;
+
+  list-style-type: none;
+  font-size: 1.5em;
+  color: yellow;
+}
+
+/* .background-img {
+  width: 100%;
+  object-fit: cover;
+  max-height: 700px;
+
+  display: block;
+} */
