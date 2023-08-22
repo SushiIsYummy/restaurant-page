@@ -1,33 +1,37 @@
 .about-us-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* justify-content: space-between; */
   gap: 30px;
 
+  /* height: 100vh; */
   background-color: black;
-  padding: 100px 50px;
+  padding: 177px 50px 100px;
 }
 
 .about-us-info {
-  font-size: 0.9em;
+  font-size: 0.9rem;
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-
-.about-us-label,
-.about-us-para {
   color: white;
 }
 
 .about-us-label {
-  font-size: 1.7em;
+  font-size: 2em;
   display: flex;
   justify-content: center;
 }
 
-.about-us-para {
-  font-size: 1.3em;
+.chef-owner-header,
+.sushi-restaurant-header {
+  font-size: 1.5rem;
+  color: rgb(165, 165, 165);
+  font-weight: bold;
+}
+
+.chef-owner-para,
+.sushi-restaurant-para {
+  font-size: 1.3rem;
 }
 
 .about-us-img-container {
