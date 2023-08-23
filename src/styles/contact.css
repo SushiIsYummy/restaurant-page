@@ -1,0 +1,129 @@
+.contact-page-container {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-header-container {
+  position: relative;
+  height: 327px;
+}
+
+.contact-background-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact-header-overlay {
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-header-label {
+  color: blue;
+  font-size: 5rem;
+}
+
+.contact-info-grid-container {
+  background-color: black;
+  flex: 1;
+}
+
+.contact-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 30px 30px;
+}
+
+.contact-restaurant-info {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.contact-restaurant-info-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.contact-restaurant-hours {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-day-and-hour {
+  display: flex;
+  justify-content: space-between;
+
+  max-width: 100%;
+}
+
+form.contact-user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  /* font-family: "Times New Roman", Times, serif;  */
+}
+
+form.contact-user-form input {
+  border: none;
+  font-family: "Times New Roman", Times, serif; 
+}
+
+form.contact-user-form input:not(.input-message){
+  height: 30px;
+  padding: 5px;
+  font-size: 1rem;
+}
+
+form.contact-user-form .input-message {
+  height: 200px;
+  padding: 5px;
+  font-size: 1rem;
+  font-family: "Times New Roman", Times, serif; 
+
+  /* max-width: 140%;  */
+  max-height: 100%;
+  /* display: flex; */
+  /* align-items: flex-start; */
+}
+
+form.contact-user-form .send-button {
+  padding: 10px 20px;
+  background-color: greenyellow;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: "Times New Roman", Times, serif; 
+
+  align-self: flex-start;
+}
+
+/* @media only screen and (min-width: 685px) {
+  .contact-info-grid {
+    padding: 74px 30px;
+  }
+} */
