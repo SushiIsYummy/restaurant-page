@@ -29,28 +29,60 @@ function createMenuImageSection() {
 function createMenuFoodSection() {
   let content = document.querySelector('#content');
 
-  let menuList = ['sashimi platter', 'sashimi platter', 'sashimi platter', 
-  'sashimi platter'];
+  let menuList = ['ahi', 'aji', 'ebi', 'hamachi', 'hokkigai', 'hotate',
+  'ika', 'katsuo', 'maguro', 'saba', 'sake', 'sanma', 'sashimi-platter', 
+  'tai' , 'tako'];
+
+  let menuListContainer = document.createElement('div');
+  menuListContainer.classList.add('menu-list-container');
 
   let menuHeaderContainer = document.createElement('div');
   menuHeaderContainer.classList.add('menu-header-container');
 
   let menuHeader = document.createElement('p');
   menuHeader.classList.add('menu-header');
-  menuHeader.textContent = 'SUSHI';
+  menuHeader.textContent = 'SASHIMI';
 
   let menuGrid = document.createElement('div');
   menuGrid.classList.add('menu-grid');
 
   for (let i = 0; i < menuList.length; i++) {
     let menuItem = document.createElement('div');
+    let itemImg = document.createElement('img');
+
+    let itemName = document.createElement('p');
+    itemName.classList.add('menu-item-name');
+    itemName.textContent = menuList[i].replace(/-/g, ' ').toUpperCase();
+
+    let itemPrice = document.createElement('p');
+    itemPrice.classList.add('menu-item-price');
+
+    if (menuList[i] === 'sashimi-platter') {
+      itemPrice.textContent = '$40.00';
+    } else {
+      itemPrice.textContent = '$4.00';
+    }
+
+    let nameAndPrice = document.createElement('div');
+    nameAndPrice.classList.add('name-and-price');
+
+    nameAndPrice.appendChild(itemName);
+    nameAndPrice.appendChild(itemPrice);
+
+    itemImg.classList.add('menu-item-img');
+    itemImg.src = `../src/images/sashimi/${menuList[i]}-sashimi.jpg`;
+
+    menuItem.appendChild(itemImg);
+    menuItem.appendChild(nameAndPrice);
     menuItem.classList.add('menu-item');
+
     menuGrid.appendChild(menuItem);
   }
 
   menuHeaderContainer.appendChild(menuHeader);
-  content.appendChild(menuHeaderContainer);
-  content.appendChild(menuGrid);
+  menuListContainer.appendChild(menuHeaderContainer);
+  menuListContainer.appendChild(menuGrid);
+  content.appendChild(menuListContainer);
 }
 
 export default createMenu;

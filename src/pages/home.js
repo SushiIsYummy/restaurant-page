@@ -62,7 +62,7 @@ function createFeaturedDishSection(contentToAppendTo) {
 
   let sashimiPlatterImg = document.createElement('img');
   sashimiPlatterImg.classList.add('sashimi-platter-img');
-  sashimiPlatterImg.src = '../src/images/sashimi-platter.jpg';
+  sashimiPlatterImg.src = '../src/images/sashimi/sashimi-platter.jpg';
 
   sectionTwo.appendChild(sashimiPlatterImg);
   sectionTwo.appendChild(sectionTwoRight);
