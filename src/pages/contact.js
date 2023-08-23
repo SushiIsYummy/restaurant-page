@@ -11,11 +11,12 @@ function createContactPage() {
   content.appendChild(contactPageContainer);
 
   // keep message input width from going off screen
-  let textArea = document.querySelector('.input-message');
-  let textAreaPositions = textArea.getBoundingClientRect();
-  textArea.style.maxWidth = `calc((100vw - ${textAreaPositions.left}px) - 30px)`;
-
+  changeMessageMaxWidth();
   window.addEventListener('resize', changeMessageMaxWidth);
+
+  // keep contact info grid at max width until screen is less than max width
+  changeContactInfoMargin();
+  window.addEventListener('resize', changeContactInfoMargin);
 }
 
 function createcontactHeader() {
@@ -171,4 +172,16 @@ export function changeMessageMaxWidth() {
   let textArea = document.querySelector('.input-message');
   let textAreaPositions = textArea.getBoundingClientRect();
   textArea.style.maxWidth = `calc((100vw - ${textAreaPositions.left}px) - 30px)`;
+}
+
+export function changeContactInfoMargin() {
+  let contactInfoGrid = document.querySelector('.contact-info-grid');
+  let contactInfoGridStyles = window.getComputedStyle(contactInfoGrid);
+  let margin = (window.innerWidth - parseInt(contactInfoGridStyles.maxWidth))/2;
+
+  if (margin <= 0) {
+    contactInfoGrid.style.margin = `0px`;
+  } else {
+    contactInfoGrid.style.margin = `0 ${margin}px`;
+  }
 }

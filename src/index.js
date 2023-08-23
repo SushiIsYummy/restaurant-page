@@ -9,7 +9,8 @@ import createHeader from './pages/header';
 import createAboutUs from './pages/about';
 import createHomePage from './pages/home';
 import createMenu from './pages/menu';
-import createContactPage, { changeMessageMaxWidth } from './pages/contact';
+import createContactPage, { changeMessageMaxWidth, 
+                            changeContactInfoMargin } from './pages/contact';
 
 createHeader();
 createContactPage();

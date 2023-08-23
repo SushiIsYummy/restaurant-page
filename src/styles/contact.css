@@ -37,6 +37,15 @@
 .contact-info-grid-container {
   background-color: black;
   flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* margin: auto; */
+  /* align-items: center; */
+  /* justify-content: space-arou */
+  /* align-items: s; */
 }
 
 .contact-info-grid {
@@ -44,9 +53,12 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 
-  margin: 0 auto;
+  /* flex: 1; */
+  /* margin: 0 auto; */
+  /* height: max-content; */
   max-width: 1200px;
   padding: 30px 30px;
+  /* align-self: center; */
 }
 
 .contact-restaurant-info {
