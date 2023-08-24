@@ -10,13 +10,14 @@ function createContactPage() {
 
   content.appendChild(contactPageContainer);
 
+  // keep contact info grid at max width until screen is less than max width
+  changeContactInfoMargin();
+  window.addEventListener('resize', changeContactInfoMargin);
+  
   // keep message input width from going off screen
   changeMessageMaxWidth();
   window.addEventListener('resize', changeMessageMaxWidth);
 
-  // keep contact info grid at max width until screen is less than max width
-  changeContactInfoMargin();
-  window.addEventListener('resize', changeContactInfoMargin);
 }
 
 function createcontactHeader() {

@@ -13,8 +13,12 @@ import createContactPage, { changeMessageMaxWidth,
                             changeContactInfoMargin } from './pages/contact';
 
 createHeader();
-createContactPage();
+
+
+// createContactPage();
+
+
 // createMenu();
 // createAboutUs();
-// createHomePage();
+createHomePage();
 

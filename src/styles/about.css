@@ -1,14 +1,14 @@
 .about-us-section {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 80px;
 
   background-color: black;
   padding: 177px 50px 100px;
 }
 
 .about-us-info {
-  font-size: 0.9rem;
+  font-size: clamp(0.9rem, 1vw, 1.2rem);
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -30,15 +30,38 @@
 
 .chef-owner-para,
 .sushi-restaurant-para {
-  font-size: 1.3rem;
+  font-size: clamp(1.1rem, 1.3vw, 1.3rem);
 }
 
 .about-us-img-container {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .about-us-img {
-  width: 600px;
-  display: block;
+  max-width: 80%;
+  object-fit: contain;
+}
+
+@media (max-width: 1100px) {
+  .about-us-section {
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .about-us-section {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .about-us-img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 415px) {
+  .about-us-section {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
 }

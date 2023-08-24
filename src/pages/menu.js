@@ -11,7 +11,7 @@ function createMenuImageSection() {
 
   let menuImg = document.createElement('img');
   menuImg.classList.add('menu-img');
-  menuImg.src = '../src/images/menu-img2.jpg'
+  menuImg.src = '../src/images/menu-img.jpg'
 
   let menuImgOverlay = document.createElement('div');
   menuImgOverlay.classList.add('menu-img-overlay');
@@ -83,6 +83,8 @@ function createMenuFoodSection() {
   menuListContainer.appendChild(menuHeaderContainer);
   menuListContainer.appendChild(menuGrid);
   content.appendChild(menuListContainer);
+
+
 }
 
 export default createMenu;
