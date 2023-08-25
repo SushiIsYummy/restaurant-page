@@ -6,9 +6,9 @@ function createHomePage() {
 
   createBackgroundImage();
 
-  createFeaturedDishSection(nonBackgroundImgContainer);
-  createSushiShowcaseSection(nonBackgroundImgContainer);
-  createReviewSection(nonBackgroundImgContainer);
+  nonBackgroundImgContainer.appendChild(createFeaturedDishSection());
+  nonBackgroundImgContainer.appendChild(createSushiShowcaseSection());
+  nonBackgroundImgContainer.appendChild(createReviewSection());
 
   content.appendChild(nonBackgroundImgContainer);
 
@@ -36,11 +36,10 @@ function createBackgroundImage() {
   backgroundImgContainer.appendChild(backgroundImg);
   backgroundImgContainer.appendChild(overlay);
   
-
   content.appendChild(backgroundImgContainer);
 }
 
-function createFeaturedDishSection(contentToAppendTo) {
+function createFeaturedDishSection() {
   let content = document.querySelector('#content');
 
   let sectionTwo = document.createElement('div');
@@ -66,12 +65,12 @@ function createFeaturedDishSection(contentToAppendTo) {
 
   sectionTwo.appendChild(sashimiPlatterImg);
   sectionTwo.appendChild(sectionTwoRight);
-  // content.appendChild(sectionTwo);
-  contentToAppendTo.appendChild(sectionTwo);
+
+  return sectionTwo;
 
 }
 
-function createSushiShowcaseSection(contentToAppendTo) {
+function createSushiShowcaseSection() {
   let content = document.querySelector('#content');
 
   let sushiShowcaseSection = document.createElement('div');
@@ -97,12 +96,12 @@ function createSushiShowcaseSection(contentToAppendTo) {
 
   sushiShowcaseSection.appendChild(sushiShowcaseLeft);
   sushiShowcaseSection.appendChild(sashimiPlatterImg);
-  // content.appendChild(sushiShowcaseSection);
-  contentToAppendTo.appendChild(sushiShowcaseSection);
+
+  return sushiShowcaseSection;
 }
 
 
-function createReviewSection(contentToAppendTo) {
+function createReviewSection() {
   let content = document.querySelector('#content');
 
   let reviewSection = document.createElement('div');
@@ -113,7 +112,7 @@ function createReviewSection(contentToAppendTo) {
   reviewPara.textContent = 
   `"The sushi I ate here was mediocre, not the best I've eaten. There 
   were a variety of sushi so that was nice. Just don't order the sashimi
-  platter, it's a scam."`.toUpperCase();
+  platter, it's not worth the price."`.toUpperCase();
 
   let reviewAuthor = document.createElement('p');
   reviewAuthor.classList.add('review-author');
@@ -122,10 +121,7 @@ function createReviewSection(contentToAppendTo) {
   reviewSection.appendChild(reviewPara);
   reviewSection.appendChild(reviewAuthor);
 
-
-  // content.appendChild(reviewSection);
-
-  contentToAppendTo.appendChild(reviewSection);
+  return reviewSection;
 }
 
 export default createHomePage;
