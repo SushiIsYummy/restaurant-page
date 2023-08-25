@@ -75,7 +75,7 @@ function createAboutUs() {
 
   let aboutUsImage = document.createElement('img');
   aboutUsImage.classList.add('about-us-img');
-  aboutUsImage.src = '../src/images/about-us-img2.jpeg';
+  aboutUsImage.src = '../src/images/about-us-img.jpeg';
 
   let aboutUsImageContainer = document.createElement('div');
   aboutUsImageContainer.classList.add('about-us-img-container');
