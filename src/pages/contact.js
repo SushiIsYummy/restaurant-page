@@ -1,3 +1,5 @@
+import createFooter from "./footer";
+
 function createContactPage() {
   let content = document.querySelector('#content');
 
@@ -7,6 +9,7 @@ function createContactPage() {
   
   contactPageContainer.appendChild(createcontactHeader());
   contactPageContainer.appendChild(createContactInfoSection());
+  contactPageContainer.appendChild(createFooter(true));
 
   content.appendChild(contactPageContainer);
 
@@ -37,12 +40,9 @@ function createcontactHeader() {
   contactBackgroundImg.classList.add('contact-background-img');
   contactBackgroundImg.src = '../src/images/contact-img.png';
 
-
   contactHeaderOverlay.appendChild(contactHeaderLabel);
   contactHeaderContainer.appendChild(contactHeaderOverlay);
   contactHeaderContainer.appendChild(contactBackgroundImg);
-
-  // content.appendChild(contactHeaderContainer);
 
   return contactHeaderContainer;
 }
@@ -85,8 +85,6 @@ function createContactInfoSection() {
   let contactRestaurantHours = document.createElement('div');
   contactRestaurantHours.classList.add('contact-restaurant-hours');
 
-
-  
   let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday',
   'Friday', 'Saturday'];
   
@@ -128,8 +126,6 @@ function createContactInfoSection() {
 
   contactInfoGridContainer.appendChild(contactInfoGrid);
 
-  // content.appendChild(contactInfoGridContainer);
-
   return contactInfoGridContainer;
 }
 
@@ -154,7 +150,6 @@ function createUserInputForm() {
 
   let message = document.createElement('textarea');
   message.classList.add('input-message');
-  // message.type = 'text';
   message.placeholder = 'Message';
 
   let sendButton = document.createElement('button');

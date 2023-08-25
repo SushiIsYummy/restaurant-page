@@ -1,4 +1,3 @@
-
 function createHomePage() {
   let content = document.querySelector('#content');
   let nonBackgroundImgContainer = document.createElement('div');
@@ -11,7 +10,6 @@ function createHomePage() {
   nonBackgroundImgContainer.appendChild(createReviewSection());
 
   content.appendChild(nonBackgroundImgContainer);
-
 }
 
 function createBackgroundImage() {
@@ -42,31 +40,31 @@ function createBackgroundImage() {
 function createFeaturedDishSection() {
   let content = document.querySelector('#content');
 
-  let sectionTwo = document.createElement('div');
-  sectionTwo.classList.add('section-two');
+  let featuredDishSection = document.createElement('div');
+  featuredDishSection.classList.add('featured-dish');
 
-  let sectionTwoRight = document.createElement('div');
-  sectionTwoRight.classList.add('section-two-right');
+  let featuredDishRight = document.createElement('div');
+  featuredDishRight.classList.add('featured-dish-right');
 
-  let sectionTwoPara = document.createElement('p');
-  sectionTwoPara.classList.add('section-two-para');
-  sectionTwoPara.textContent = `TRY OUT OUR SASHIMI PLATTER`;
+  let featuredDishPara = document.createElement('p');
+  featuredDishPara.classList.add('featured-dish-para');
+  featuredDishPara.textContent = `TRY OUT OUR SASHIMI PLATTER`;
   
-  let button = document.createElement('button');
-  button.classList.add('order-now-button');
-  button.textContent = 'ORDER NOW';
+  let orderNowButton = document.createElement('button');
+  orderNowButton.classList.add('order-now-button');
+  orderNowButton.textContent = 'ORDER NOW';
 
-  sectionTwoRight.appendChild(sectionTwoPara);
-  sectionTwoRight.appendChild(button);
+  featuredDishRight.appendChild(featuredDishPara);
+  featuredDishRight.appendChild(orderNowButton);
 
   let sashimiPlatterImg = document.createElement('img');
   sashimiPlatterImg.classList.add('sashimi-platter-img');
   sashimiPlatterImg.src = '../src/images/sashimi/sashimi-platter-sashimi.jpg';
 
-  sectionTwo.appendChild(sashimiPlatterImg);
-  sectionTwo.appendChild(sectionTwoRight);
+  featuredDishSection.appendChild(sashimiPlatterImg);
+  featuredDishSection.appendChild(featuredDishRight);
 
-  return sectionTwo;
+  return featuredDishSection;
 
 }
 
@@ -79,16 +77,16 @@ function createSushiShowcaseSection() {
   let sushiShowcaseLeft = document.createElement('div');
   sushiShowcaseLeft.classList.add('sushi-showcase-left');
 
-  let sectionTwoPara = document.createElement('p');
-  sectionTwoPara.classList.add('sushi-showcase-para');
-  sectionTwoPara.textContent = `EXPLORE OUR SUSHI SELECTION`;
+  let sushiShowcasePara = document.createElement('p');
+  sushiShowcasePara.classList.add('sushi-showcase-para');
+  sushiShowcasePara.textContent = `EXPLORE OUR SUSHI SELECTION`;
   
-  let button = document.createElement('button');
-  button.classList.add('view-menu-button');
-  button.textContent = 'VIEW MENU';
+  let viewMenuButton = document.createElement('button');
+  viewMenuButton.classList.add('view-menu-button');
+  viewMenuButton.textContent = 'VIEW MENU';
 
-  sushiShowcaseLeft.appendChild(sectionTwoPara);
-  sushiShowcaseLeft.appendChild(button);
+  sushiShowcaseLeft.appendChild(sushiShowcasePara);
+  sushiShowcaseLeft.appendChild(viewMenuButton);
 
   let sashimiPlatterImg = document.createElement('img');
   sashimiPlatterImg.classList.add('sushi-showcase-img');
@@ -110,9 +108,9 @@ function createReviewSection() {
   let reviewPara = document.createElement('p');
   reviewPara.classList.add('review-para');
   reviewPara.textContent = 
-  `"The sushi I ate here was mediocre, not the best I've eaten. There 
-  were a variety of sushi so that was nice. Just don't order the sashimi
-  platter, it's not worth the price."`.toUpperCase();
+  `"The food I ate here was mediocre. There isn't even any sushi or other
+  dishes, just sashimi. Staff was rude and the sashimi platter is way
+  too expensive. Never eating here again."`.toUpperCase();
 
   let reviewAuthor = document.createElement('p');
   reviewAuthor.classList.add('review-author');

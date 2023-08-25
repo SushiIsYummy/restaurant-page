@@ -58,7 +58,7 @@ function createMenuFoodSection() {
     itemPrice.classList.add('menu-item-price');
 
     if (menuList[i] === 'sashimi-platter') {
-      itemPrice.textContent = '$40.00';
+      itemPrice.textContent = '$85.99';
     } else {
       itemPrice.textContent = '$4.00';
     }

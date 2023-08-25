@@ -41,11 +41,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  /* margin: auto; */
-  /* align-items: center; */
-  /* justify-content: space-arou */
-  /* align-items: s; */
 }
 
 .contact-info-grid {
@@ -53,12 +48,8 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 
-  /* flex: 1; */
-  /* margin: 0 auto; */
-  /* height: max-content; */
   max-width: 1200px;
   padding: 30px 30px;
-  /* align-self: center; */
 }
 
 .contact-restaurant-info {
@@ -68,7 +59,6 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 30px;
 }
 
@@ -95,8 +85,6 @@ form.contact-user-form {
   display: flex;
   flex-direction: column;
   gap: 20px;
-
-  /* font-family: "Times New Roman", Times, serif;  */
 }
 
 form.contact-user-form input {
@@ -115,11 +103,7 @@ form.contact-user-form .input-message {
   padding: 5px;
   font-size: 1rem;
   font-family: "Times New Roman", Times, serif; 
-
-  /* max-width: 140%;  */
   max-height: 100%;
-  /* display: flex; */
-  /* align-items: flex-start; */
 }
 
 form.contact-user-form .send-button {
@@ -134,8 +118,8 @@ form.contact-user-form .send-button {
   align-self: flex-start;
 }
 
-/* @media only screen and (min-width: 685px) {
-  .contact-info-grid {
-    padding: 74px 30px;
-  }
-} */
+form.contact-user-form .send-button:hover {
+  filter: brightness(90%);
+  transition: filter 0.1s;
+  cursor: pointer;
+}

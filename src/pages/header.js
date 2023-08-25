@@ -49,6 +49,7 @@ function createHeader() {
   content.appendChild(header);
 
   addHamburgerFunctionality();
+  addActiveToTabs();
   
 }
 
@@ -61,12 +62,38 @@ function addHamburgerFunctionality() {
     navMenu.classList.toggle('active');
   })
 
-  document.querySelectorAll('nav-link').forEach(n => {
+  document.querySelectorAll('.nav-link').forEach(n => {
     n.addEventListener('click', () => {
       hamburger.classList.remove('active');
       navMenu.classList.remove('active');
     })
   })
+}
+
+function addActiveToTabs() {
+  let navLinks = document.querySelectorAll('.nav-link');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      navLinks.forEach(link2 => {
+        link2.classList.remove('active');
+      })
+
+      e.target.classList.add('active');
+    })
+  })
+
+  let restaurantBrandingLink = document.querySelector('.restaurant-branding');
+  
+  restaurantBrandingLink.addEventListener('click', () => {
+    let homeLink = document.querySelector('.home-nav a');
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+    })
+
+    homeLink.classList.add('active');
+  });
 }
 
 

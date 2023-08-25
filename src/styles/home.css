@@ -35,7 +35,7 @@
 }
 
 
-.section-two, .sushi-showcase {
+.featured-dish, .sushi-showcase {
   display: flex;
   gap: 50px;
 
@@ -56,14 +56,14 @@
   object-fit: cover;
 }
 
-.section-two-para,
+.featured-dish-para,
 .sushi-showcase-para {
   color: white;
   font-size: clamp(1rem, 5.5vw, 4.5rem);
   padding-top: 10%;
 }
 
-.section-two-right,
+.featured-dish-right,
 .sushi-showcase-left {
   flex: 1;
   display: flex;
@@ -80,6 +80,12 @@
   color: black;
 
   align-self: flex-start;
+}
+.order-now-button:hover,
+.view-menu-button:hover {
+  cursor: pointer;
+  filter: brightness(90%);
+  transition: filter 0.1s;
 }
 
 .review-section {
@@ -107,19 +113,19 @@
 
 @media (max-width: 860px) {
 
-  .section-two,
+  .featured-dish,
   .sushi-showcase {
     flex-direction: column;
     gap: 30px;
     text-align: center;
   }
 
-  .section-two-right,
+  .featured-dish-right,
   .sushi-showcase-left {
     display: contents;
   }
 
-  .section-two-para,
+  .featured-dish-para,
   .sushi-showcase-para {
     font-size: clamp(2.8rem, 7vw, 5rem);
     order: 1;
@@ -149,7 +155,6 @@
   .review-author {
     font-size: clamp(1.2rem, 3vw, 1.4rem);
   }
-
 }
 
 @media (max-width: 700px) {

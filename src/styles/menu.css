@@ -1,12 +1,12 @@
 .menu-img-container {
   position: relative;
-  /* display: block; */
 }
 
 .menu-img {
   width: 100%;
   height: 750px;
   object-fit: cover;
+  display: block;
 }
 
 .menu-img-overlay {
