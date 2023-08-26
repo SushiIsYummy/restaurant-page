@@ -53,6 +53,7 @@
 @media (max-width: 640px) {
   .about-us-section {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 107px 20px 40px;
   }
 
   .about-us-img {

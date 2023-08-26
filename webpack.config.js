@@ -89,18 +89,6 @@ module.exports = {
         removeComments: true
       }
     }),
-    // new CopyWebpackPlugin({
-    //   patterns: [
-    //     {
-    //       from: 'src/images', // Source directory
-    //       to: 'images', // Destination directory in dist
-    //       globOptions: {
-    //         ignore: ['**/index.html'], // Ignore certain files if needed
-    //       },
-    //     },
-    //     ...glob.sync('src/images/**/', { nodir: true }), // Subdirectories
-    //   ],
-    // }),
   ],
   devtool: 'inline-source-map',
 };

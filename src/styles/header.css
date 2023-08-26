@@ -61,6 +61,11 @@ a.restaurant-branding {
   background-color: white;
 }
 
+.nav-link:hover {
+  filter: brightness(90%);
+  transition: filter 0.1s;
+}
+
 @media(max-width: 768px) {
   .hamburger {
     display: block;
@@ -80,16 +85,21 @@ a.restaurant-branding {
 
   .nav-menu {
     position: fixed;
-    left: -100%;
+    left: -200%;
     top: 77px;
     gap: 70px;
     flex-direction: column;
     justify-content: center;
     width: 100%;
     height: calc(100% - 77px);
+    z-index: 0;
     background-color: rgb(39, 35, 35);
     text-align: center;
     transition: 0.3s;
+
+    /* disable scrolling (using touch) when hamburger menu is opened */
+    /* scrolling with mouse still works */
+    touch-action: none;
   }
 
   .nav-menu li {
@@ -108,9 +118,4 @@ a.restaurant-branding {
   .nav-menu.active {
     left: 0;
   }
-}
-
-.nav-link:hover {
-  filter: brightness(90%);
-  transition: filter 0.1s;
 }
