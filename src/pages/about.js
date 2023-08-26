@@ -54,11 +54,11 @@ function createAboutUs() {
   `Hailing from the city of Tokyo, Japan, our Chef 
   Owner's fascination with sushi has been a lifelong affair. From dawn 
   till dusk every day, all his meals would include sushi. Sushi was his
-  favourite food and could not resist it. It was his passion, it was his
+  favourite food and he could not resist it. It was his passion, it was his
   identity.
   
-  Beyond being a mere sushi enthusiast, Chef Owner dreamt of creating sushi
-  as an art form. At the age of 12, he became an apprentice of the world 
+  Beyond being a mere sushi consumer, Chef Owner also wanted to create
+  sushi that others can enjoy. At the age of 12, he became an apprentice of the world 
   renowned Chef Master, igniting a culinary journey that would shape his 
   life forever. With determination, he embarked on the path of sushi craftsmanship, 
   honing his skills to perfection.
@@ -66,7 +66,7 @@ function createAboutUs() {
   His sushi garnered acclaim from friends and family. In receiving all this praise,
   Chef Owner believed his sushi was the key to happiness. He desired to share his 
   sushi with the world, allowing others to experience the happiness only he could
-  provde.
+  provide.
 
   At the age of 20, Chef Owner opened his first sushi restaurant. It was a restaurant 
   that stood as a testament to his dedication and flair, swiftly garnering attention

@@ -71,5 +71,8 @@ function activateViewMenuButton() {
     removeAllButHeader();
     createMenu();
     createFooter();
+
+    // view page starting at the top
+    window.scrollTo(0, 0);
   });
 }
