@@ -1,3 +1,5 @@
+import aboutUsImageFile from '../images/about-us-img.jpeg';
+
 function createAboutUs() {
   let content = document.querySelector('#content');
 
@@ -75,7 +77,7 @@ function createAboutUs() {
 
   let aboutUsImage = document.createElement('img');
   aboutUsImage.classList.add('about-us-img');
-  aboutUsImage.src = '../src/images/about-us-img.jpeg';
+  aboutUsImage.src = aboutUsImageFile;
 
   let aboutUsImageContainer = document.createElement('div');
   aboutUsImageContainer.classList.add('about-us-img-container');

@@ -1,4 +1,5 @@
 import createFooter from "./footer";
+import contactBackgroundImg from '../images/contact-img.jpg';
 
 function createContactPage() {
   let content = document.querySelector('#content');
@@ -36,13 +37,13 @@ function createcontactHeader() {
   contactHeaderLabel.classList.add('contact-header-label');
   contactHeaderLabel.textContent = 'Contact';
 
-  let contactBackgroundImg = document.createElement('img');
-  contactBackgroundImg.classList.add('contact-background-img');
-  contactBackgroundImg.src = '../src/images/contact-img.png';
+  let contactBackground = document.createElement('img');
+  contactBackground.classList.add('contact-background-img');
+  contactBackground.src = contactBackgroundImg;
 
   contactHeaderOverlay.appendChild(contactHeaderLabel);
   contactHeaderContainer.appendChild(contactHeaderOverlay);
-  contactHeaderContainer.appendChild(contactBackgroundImg);
+  contactHeaderContainer.appendChild(contactBackground);
 
   return contactHeaderContainer;
 }
@@ -164,13 +165,13 @@ function createUserInputForm() {
 
 export default createContactPage;
 
-export function changeMessageMaxWidth() {
+function changeMessageMaxWidth() {
   let textArea = document.querySelector('.input-message');
   let textAreaPositions = textArea.getBoundingClientRect();
   textArea.style.maxWidth = `calc((100vw - ${textAreaPositions.left}px) - 30px)`;
 }
 
-export function changeContactInfoMargin() {
+function changeContactInfoMargin() {
   let contactInfoGrid = document.querySelector('.contact-info-grid');
   let contactInfoGridStyles = window.getComputedStyle(contactInfoGrid);
   let margin = (window.innerWidth - parseInt(contactInfoGridStyles.maxWidth))/2;

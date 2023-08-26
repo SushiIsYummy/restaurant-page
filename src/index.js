@@ -11,8 +11,7 @@ import createHeader from './pages/header';
 import createAboutUs from './pages/about';
 import createHomePage from './pages/home';
 import createMenu from './pages/menu';
-import createContactPage, { changeMessageMaxWidth, 
-                            changeContactInfoMargin } from './pages/contact';
+import createContactPage from './pages/contact';
 import createFooter from './pages/footer';
 
 // on first load

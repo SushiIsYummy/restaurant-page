@@ -72,6 +72,7 @@ function addHamburgerFunctionality() {
 
 function addActiveToTabs() {
   let navLinks = document.querySelectorAll('.nav-link');
+  let navMenu = document.querySelector('.nav-menu');
 
   navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
@@ -93,6 +94,9 @@ function addActiveToTabs() {
     })
 
     homeLink.classList.add('active');
+
+    // remove navMenu (if opened) when restaurant branding is clicked
+    navMenu.classList.remove('active');
   });
 }
 

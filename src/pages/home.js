@@ -1,3 +1,7 @@
+import backgroundImg from '../images/sushi-background.jpg';
+import sashimiPlatterImg from '../images/sashimi/sashimi-platter-sashimi.jpg';
+import aLotOfSushi from '../images/a-lot-of-sushi.jpg';
+
 function createHomePage() {
   let content = document.querySelector('#content');
   let nonBackgroundImgContainer = document.createElement('div');
@@ -27,11 +31,11 @@ function createBackgroundImage() {
 
   overlay.appendChild(overlayPara);
 
-  let backgroundImg = document.createElement('img');
-  backgroundImg.classList.add('background-img');
-  backgroundImg.src = '../src/images/sushi-background.jpg';
+  let background = document.createElement('img');
+  background.classList.add('background-img');
+  background.src = backgroundImg;
 
-  backgroundImgContainer.appendChild(backgroundImg);
+  backgroundImgContainer.appendChild(background);
   backgroundImgContainer.appendChild(overlay);
   
   content.appendChild(backgroundImgContainer);
@@ -57,11 +61,11 @@ function createFeaturedDishSection() {
   featuredDishRight.appendChild(featuredDishPara);
   featuredDishRight.appendChild(orderNowButton);
 
-  let sashimiPlatterImg = document.createElement('img');
-  sashimiPlatterImg.classList.add('sashimi-platter-img');
-  sashimiPlatterImg.src = '../src/images/sashimi/sashimi-platter-sashimi.jpg';
+  let sashimiPlatter = document.createElement('img');
+  sashimiPlatter.classList.add('sashimi-platter-img');
+  sashimiPlatter.src = sashimiPlatterImg;
 
-  featuredDishSection.appendChild(sashimiPlatterImg);
+  featuredDishSection.appendChild(sashimiPlatter);
   featuredDishSection.appendChild(featuredDishRight);
 
   return featuredDishSection;
@@ -88,12 +92,12 @@ function createSushiShowcaseSection() {
   sushiShowcaseLeft.appendChild(sushiShowcasePara);
   sushiShowcaseLeft.appendChild(viewMenuButton);
 
-  let sashimiPlatterImg = document.createElement('img');
-  sashimiPlatterImg.classList.add('sushi-showcase-img');
-  sashimiPlatterImg.src = '../src/images/a-lot-of-sushi.jpg';
+  let sushiShowcase = document.createElement('img');
+  sushiShowcase.classList.add('sushi-showcase-img');
+  sushiShowcase.src = aLotOfSushi;
 
   sushiShowcaseSection.appendChild(sushiShowcaseLeft);
-  sushiShowcaseSection.appendChild(sashimiPlatterImg);
+  sushiShowcaseSection.appendChild(sushiShowcase);
 
   return sushiShowcaseSection;
 }

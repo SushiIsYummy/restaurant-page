@@ -1,3 +1,11 @@
+import menuBackgroundImg from '../images/menu-img.jpg';
+
+// Import all images from the 'images/sashimi' folder
+const imageContext = require.context('../images/sashimi', false, /\.(png|jpg|jpeg|gif|svg)$/);
+
+// Create an array of imported image URLs
+const imageUrls = imageContext.keys().map(imagePath => imageContext(imagePath).default);
+
 function createMenu() {
   createMenuImageSection();
   createMenuFoodSection();
@@ -11,7 +19,7 @@ function createMenuImageSection() {
 
   let menuImg = document.createElement('img');
   menuImg.classList.add('menu-img');
-  menuImg.src = '../src/images/menu-img.jpg'
+  menuImg.src = menuBackgroundImg;
 
   let menuImgOverlay = document.createElement('div');
   menuImgOverlay.classList.add('menu-img-overlay');
@@ -70,7 +78,7 @@ function createMenuFoodSection() {
     nameAndPrice.appendChild(itemPrice);
 
     itemImg.classList.add('menu-item-img');
-    itemImg.src = `../src/images/sashimi/${menuList[i]}-sashimi.jpg`;
+    itemImg.src = imageUrls[i];
 
     menuItem.appendChild(itemImg);
     menuItem.appendChild(nameAndPrice);
@@ -83,8 +91,6 @@ function createMenuFoodSection() {
   menuListContainer.appendChild(menuHeaderContainer);
   menuListContainer.appendChild(menuGrid);
   content.appendChild(menuListContainer);
-
-
 }
 
 export default createMenu;
